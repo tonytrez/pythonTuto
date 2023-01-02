@@ -13,8 +13,11 @@ class Character:
     def _setname(self, name: str):
         while len(name) < 4:
             print("Your name must contain at least 4 letters")
-            name = input("Quel est le nom de on personnage ? ")
+            name = input("Quel est le nom de ton personnage ? ")
 
         self._name = name
+
+    def attack(self, target: str):
+        print('{} attaque {}'.format(self._name, target))
 
     name = property(_getname, _setname)
